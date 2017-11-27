@@ -1,0 +1,299 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  display: block;
+  height: auto;
+}
+button,
+button:focus,
+button:active {
+	outline: none;
+	box-sizing: border-box;
+  cursor: pointer;
+}
+input,
+input:focus{
+	outline: none;
+	box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  visibility: hidden;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #001826;
+  padding: 10px 30px 14px;
+}
+.navbar-button {
+  width: 40px;
+  height: 35px;
+  padding: 2px 5px;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 3px;
+  float: left;
+  display: none;
+}
+.navbar-button span {
+  display: block;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+}
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  float: left;
+}
+.navbar-brand .logo-img {
+  margin-right: 10px;
+  width: 46px;
+}
+.navbar-brand .logo-text {
+  width: 78px;
+}
+.navbar-langs {
+  display: inline-flex;
+  justify-content: center;
+  float: right;
+  padding: 8px 0;
+}
+.navbar-langs li {
+  margin: 0 10px;
+  width: 25px;
+}
+.navbar-menu {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 3% 4px;
+}
+.navbar-menu-item {
+  position: relative;
+}
+.navbar-menu-item a {
+  display: inline-block;
+  min-width: 170px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  padding: 7px 20px;
+  text-align: center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+.navbar-menu-item a:hover {
+  border-color: #1cbeca;
+}
+.navbar-menu-item:after,
+.navbar-menu-item:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0px;
+  background: #1cbeca;
+  vertical-align: middle;
+  transition: height .2s ease-in 0s;
+}
+.navbar-menu-item:hover:after,
+.navbar-menu-item:hover:before {
+  height: 31px;
+  transition: height .2s ease-out .1s;
+}
+.footer {
+  background-color: #001826;
+	padding: 30px 30px;
+	display: flex;
+	justify-content: center;
+	height: 170px;
+}
+.footer-brand {
+  display: inline-flex;
+	align-items: center;
+	flex-direction: column;
+}
+.footer-brand .logo-img {
+  margin-bottom: 15px;
+  width: 46px;
+}
+.footer-brand .logo-text {
+  width: 78px;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-button {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 5%;
+  }
+  .navbar {
+    padding: 25px 0 15px;
+  }
+  .navbar-brand {
+    justify-content: center;
+    flex-direction: column;
+    width: 34%;
+    margin-left: 33%;
+    margin-bottom: 10px;
+  }
+  .navbar-brand .logo-img {
+    margin: 0 0 10px;
+    width: 56px;
+  }
+  .navbar-brand .logo-text {
+    width: 102px;
+  }
+  .navbar-langs {
+    width: 33%;
+    min-width: 150px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  .navbar-langs li {
+    width: 49px;
+  }
+  .navbar-menu {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    max-height: 0;
+    transition: max-height .3s ease-out;
+    overflow: hidden;
+    padding-left: 5%;
+  }
+  .navbar-menu.active {
+    max-height: 8em;
+  }
+  .navbar-menu li {
+    margin: 3px 0;
+  }
+  .navbar-menu-item a {
+    text-align: left;
+    border: none;
+    padding-left: 10px;
+  }
+  .navbar-menu-item:after {
+    display: none;
+  }
+  .navbar-menu-item:hover:before {
+    height: 28px;
+	}
+	.footer {
+		height: 150px;
+		align-items: center;
+	}
+	.footer-brand {
+		flex-direction: row;
+		align-items: center;
+  }
+  .footer-brand .logo-img {
+    margin: 0 15px 0 0;
+    width: 56px;
+  }
+  .footer-brand .logo-text {
+    width: 102px;
+  }
+}

@@ -1,0 +1,283 @@
+.header {
+	position: relative;
+	background-color: #001826;
+}
+.header_content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: 9;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(0, 24, 38, .8) url(./img/global.png) no-repeat center;
+	background-size: contain;
+	text-align: center;
+}
+.header_heading {
+	/* line-height: 74px;
+	font-size: 52px; */
+	font-size: 4.4vw;
+	line-height: 1.4;
+	color: #fff;
+	font-weight: bold;
+	padding: 0 4% 2.2%;
+	text-transform: uppercase;
+}
+.header_text {
+	/* font-size: 29px;
+	line-height: 45px; */
+	color: #1cbeca;
+	font-size: 2.6vw;
+	font-weight: bold;
+	line-height: 1.4;
+	width: 56vw;
+	text-transform: uppercase;
+}
+.constellation{
+	position: absolute;
+}
+.header .constellation {
+	right: 13%;
+	top: 8%;
+}
+
+.about {
+	background: #001826 url(./img/constellation.png);
+	background-repeat: no-repeat;
+	background-position: 4% 50%;
+	/* background-attachment: fixed; */
+	padding: 30px 0;
+	position: relative;
+}
+.about_content {
+	width: 746px;
+	max-width: 90%;
+	margin: 0px auto;
+}
+.about_text {
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 42px;
+	font-size: 19px;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	border-bottom: 2px solid #fff;
+	padding-bottom: 25px;
+}
+.about_icons {
+	text-align: center;
+	margin: 35px 0;
+}
+.about_icons li{
+	display: inline-block;
+	margin: 15px 20px;
+}
+
+.subscribe_form{
+	padding: 45px 0 20px;
+}
+.subscribe_text {
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 2px;
+	color: #1cbeca;
+	font-size: 13px;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+.subscribe_fields button,
+.subscribe_fields input{
+	border: 1px solid #fff;
+	color: #fff;
+	height: 45px;
+	background: transparent;
+	padding: 0 10px;
+}
+.subscribe_fields button {
+	float: right;
+	text-transform: uppercase;
+	width: 29%;
+}
+.subscribe_fields input {
+	float: left;
+	width: 70%;
+}
+.subscribe_error {
+	font-family: Raleway;
+	font-weight: 300;
+	color: #1cbeca;
+	font-size: 11px;
+	line-height: 16px;
+	padding: 12px 0 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.team {
+	padding: 30px 4%;
+	background-image: url(./img/bg_logo.png);
+	background-repeat: no-repeat;
+	background-position: 130% 40%;
+}
+.team_logo {
+	margin: 30px 0;
+	text-align: center;
+}
+.team_logo img {
+	display: inline-block;
+	vertical-align: middle;
+}
+.team_logo_text {
+	display: inline-block;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: #1cbeca;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	margin-left: 15px;
+}
+.team_list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding: 50px 0 100px;
+	max-width: 1600px;
+}
+.team_list li {
+	width: 48%;
+	margin-bottom: 35px;
+}
+.member_image_wrap {
+	display: inline-block;
+	float: left;
+	width: 122px;
+	border-radius: 50%;
+	border: 1px solid #565a93;
+	margin-right: 30px;
+}
+.member_image {
+	padding-bottom: 104%;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+}
+.member_info {
+	overflow: hidden;
+}
+.member_name {
+	font-family: Quicksand;
+	font-weight: 700;
+	color: #2b2b2b;
+	font-size: 17px;
+	line-height: 32px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.member_title {
+	font-family: Quicksand;
+	font-weight: 700;
+	color: #2b2b2b;
+	font-size: 15px;
+	line-height: 32px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.member_text {
+	font-family: Quicksand;
+	font-weight: 400;
+	color: #2b2b2b;
+	font-size: 14px;
+	line-height: 25px;
+	letter-spacing: 1px;
+}
+
+@media screen and (max-width: 960px) {
+	.team {
+		background-position: 180% 40%;
+	}
+	.team_list {
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 40px 0 80px;
+	}
+	.team_list li {
+		width: 100%;
+		margin-bottom: 65px;
+	}
+	.member_image_wrap {
+		width: 32%;
+		padding: 5px;
+		margin-right: 5%;
+		margin-bottom: 5px;
+	}
+	.member_info {
+		overflow: visible;
+	}
+	.member_name,
+	.member_title {
+		font-size: 18px;
+		display: inline-block;
+		line-height: 32px;
+		vertical-align: middle;
+	}
+	.member_name {
+		padding-right: 10px;
+		margin-right: 10px;
+		position: relative;
+	}
+	.member_name:after {
+		content: "";
+		display: inline-block;
+		width: 2px;
+		height: 18px;
+		background: #2b2b2b;
+		position: absolute;
+		right: 0;
+		top: 6px;
+	}
+	.member_text {
+		margin-top: 15px;
+		font-size: 15px;
+		line-height: 27px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.member_name{
+		padding-right: 0;
+		display: block;
+		line-height: 22px;
+		margin-bottom: 5px;
+	}
+	.member_name:after{
+		display: none;
+	}
+	.member_title {
+		display: block;
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 5px;
+	}
+	.team_logo_text {
+		display: block;
+		margin: 15px 0 0;
+	}
+	.member_image_wrap {
+		padding: 3px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.subscribe_fields input {
+		width: 60%;
+	}
+	.subscribe_fields button {
+		width: 38%;
+	}
+}
