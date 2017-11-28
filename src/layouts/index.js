@@ -3,9 +3,14 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import './styles.css'
 
-export default ({ children }) =>
-<div className="wrapper">
-  <Navigation />
-	{children()}
-	<Footer />
-</div>
+export default class Template extends React.Component {
+	render() {
+		return (
+			<div className="wrapper">
+				<Navigation />
+					{this.props.children()}
+				<Footer />
+			</div>
+		);
+	}
+}

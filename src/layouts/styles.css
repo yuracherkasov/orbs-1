@@ -196,10 +196,11 @@ input:focus{
   background: #1cbeca;
   vertical-align: middle;
   transition: height .2s ease-in 0s;
+  margin-top: -1px;
 }
 .navbar-menu-item:hover:after,
 .navbar-menu-item:hover:before {
-  height: 31px;
+  height: 30px;
   transition: height .2s ease-out .1s;
 }
 .footer {

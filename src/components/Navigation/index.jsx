@@ -2,6 +2,7 @@ import React from 'react'
 import { withPrefix } from 'gatsby-link'
 import Japan from './img/japan.svg'
 import US from './img/us.svg'
+import Link from 'gatsby-link'
 
 class Navigation extends React.Component {
 	componentWillMount() {
@@ -14,14 +15,15 @@ class Navigation extends React.Component {
 			isActiveMenu: !this.state.isActiveMenu,
 		})
 	}
+
 	render() {
 		const pathPrefix =
 			process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
 		return (
 			<nav className="navbar">
 				<ul className="navbar-langs">
-					<li><a href="#"><img src={Japan} alt="" /></a></li>
-					<li><a href="#"><img src={US} alt="" /></a></li>
+					<li><Link to='/Japaneseweb/'><img src={Japan} alt="" /></Link></li>
+					<li><Link to='/'><img src={US} alt="" /></Link></li>
 				</ul>
 				<button className="navbar-button" onClick={this.toggleMenu}>
 					<span />
