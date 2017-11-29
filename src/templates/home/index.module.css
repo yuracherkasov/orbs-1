@@ -1,3 +1,6 @@
+@font-face {font-family:ITC Avant Garde Gothic Medium;
+	src: url(./fonts/itc-avant-garde-gothic-medium.otf);}
+
 .header {
 	position: relative;
 	background-color: #001826;
@@ -16,28 +19,54 @@
 	background: rgba(0, 24, 38, .8) url(./img/global.png) no-repeat center;
 	background-size: contain;
 	text-align: center;
+	color: #fff;
 }
 .header_heading {
-	/* line-height: 74px;
-	font-size: 52px; */
-	font-size: 4.4vw;
+	line-height: 74px;
+	font-size: 52px;
+	/* font-size: 4.2vw; */
 	line-height: 1.4;
 	color: #fff;
 	font-weight: bold;
-	padding: 0 4% 2.2%;
+	padding: 0 4% 30px;
 	text-transform: uppercase;
+	font-family: ITC Avant Garde Gothic Medium;
+	font-weight: 400;
+	letter-spacing: 2px;
 }
 .header_text {
-	/* font-size: 29px;
-	line-height: 45px; */
+	font-size: 29px;
+	line-height: 45px;
 	color: #1cbeca;
-	font-size: 2.6vw;
+	/* font-size: 2.6vw; */
 	font-weight: bold;
 	line-height: 1.4;
-	width: 56vw;
+	width: 84%;
+	max-width: 600px;
 	text-transform: uppercase;
+	/* margin-bottom: 3.4%; */
+	margin-bottom: 50px;
+	font-family: ITC Avant Garde Gothic Medium;
+	font-weight: 400;
+	letter-spacing: 2px;
 }
-.constellation{
+.header_button {
+	cursor: pointer;
+	border: 2px solid rgba(28, 190, 202, 1);
+	font-size: 16px;
+	line-height: 32px;
+	font-weight: 400px;
+	letter-spacing: 1px;
+	font-family: ITC Avant Garde Gothic Medium;
+	padding: 10px 40px 8px;
+	background: rgba(28, 190, 202, 0);
+	transition: all .3s ease-out;
+}
+.header_button:hover {
+	color: #fff;
+	background: rgba(28, 190, 202, 1);
+}
+.constellation {
 	position: absolute;
 }
 .header .constellation {
@@ -64,7 +93,7 @@
 	line-height: 42px;
 	font-size: 19px;
 	text-align: center;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Quicksand';
 	font-weight: 400;
 	border-bottom: 2px solid #fff;
 	padding-bottom: 25px;
@@ -79,7 +108,10 @@
 }
 
 .subscribe_form{
-	padding: 45px 0 20px;
+	padding: 45px 0;
+	min-height: 80px;
+	position: relative;
+	box-sizing: content-box;
 }
 .subscribe_text {
 	text-transform: uppercase;
@@ -89,6 +121,7 @@
 	font-size: 13px;
 	line-height: 24px;
 	margin-bottom: 10px;
+	font-family: ITC Avant Garde Gothic Medium;
 }
 .subscribe_fields button,
 .subscribe_fields input{
@@ -97,6 +130,9 @@
 	height: 45px;
 	background: transparent;
 	padding: 0 10px;
+	font-family: ITC Avant Garde Gothic Medium;
+	font-size: 12px;
+	letter-spacing: 1px;
 }
 .subscribe_fields button {
 	float: right;
@@ -107,15 +143,28 @@
 	float: left;
 	width: 70%;
 }
+.subscribe_congratulation {
+	color: #fff;
+	position: absolute;
+	left: 35px;
+	bottom: 25px;
+	font-size: 20px;
+	font-family: ITC Avant Garde Gothic Medium;
+	font-weight: 400;
+	line-height: 58px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
 .subscribe_error {
 	font-family: Raleway;
 	font-weight: 300;
 	color: #1cbeca;
 	font-size: 11px;
 	line-height: 16px;
-	padding: 12px 0 0;
 	width: 100%;
-	overflow: hidden;
+	position: absolute;
+	left: 0;
+	bottom: 20px;
 }
 
 .team {
@@ -134,7 +183,7 @@
 }
 .team_logo_text {
 	display: inline-block;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 2px;
 	color: #1cbeca;
 	font-size: 30px;
@@ -142,6 +191,7 @@
 	text-transform: uppercase;
 	vertical-align: middle;
 	margin-left: 15px;
+	font-family: ITC Avant Garde Gothic Medium;
 }
 .team_list {
 	display: flex;
@@ -200,6 +250,9 @@
 }
 
 @media screen and (max-width: 960px) {
+	.header_bg {
+		height: 710px;
+	}
 	.team {
 		background-position: 180% 40%;
 	}
@@ -250,6 +303,24 @@
 	}
 }
 @media screen and (max-width: 500px) {
+	.header_bg {
+		height: 590px;
+	}
+	.header_heading {
+		line-height: 50px;
+		font-size: 38px;
+		padding-bottom: 30px;
+	}
+	.header_text {
+		font-size: 24px;
+		line-height: 38px;
+		margin-bottom: 50px;
+		width: 90%;
+	}
+	.header_button {
+		font-size: 14px;
+		padding: 8px 30px 6px;
+	}
 	.member_name{
 		padding-right: 0;
 		float: none;
@@ -274,6 +345,13 @@
 	}
 }
 @media screen and (max-width: 400px) {
+	.header_bg {
+		height: 520px;
+	}
+	.about_text {
+		font-size: 17px;
+		line-height: 38px;
+	}
 	.subscribe_fields input {
 		width: 60%;
 	}

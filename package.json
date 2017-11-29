@@ -9,6 +9,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-glamor": "^1.6.8",
@@ -18,6 +19,7 @@
     "gatsby-transformer-json": "^1.0.12",
     "gatsby-transformer-remark": "^1.7.21",
     "glamorous": "^4.11.0",
+    "react-responsive": "^4.0.3",
     "typography-theme-kirkham": "^0.16.3"
   },
   "devDependencies": {
