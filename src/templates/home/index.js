@@ -9,26 +9,18 @@ import Telegram from './img/telegram.png'
 import Twitter from './img/twitter.png'
 import styles from './index.module.css'
 
-export default class HomePage extends React.Component {
-	constructor(props) {
-		super(props)
-		console.log(props);
-		this.state = {
-			iframe: props.data.allMarkdownRemark.edges.filter(({ node }) => /(iframe.md)$/.test(node.fileAbsolutePath))[0],
-			team: props.data.allTeamsJson.edges[0].node,
-			lang: 'US',
-		}
-	}
-
-	render () {		
-		const { iframe, team, lang } = this.state;
+export default ({data}) => {
+	
+		const home = data.allIndexJson.edges[0].node;
 		const pathPrefix = process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__;
+		const iframe = data.allMarkdownRemark.edges.filter(({ node }) => /(iframe.md)$/.test(node.fileAbsolutePath))[0];
+
 		return (
 			<div>
 				<header className={styles.header}>
-					<div className={styles.header_content}>
-						<h1 className={styles.header_heading}>CONSUMER GRADE BLOCKCHAIN</h1>
-						<p className={styles.header_text}>INFRASTRUCTURE BUILT FOR REAL LIFE SCALE, COMPLIANCE AND UPDATES</p>
+				<div className={styles.header_content}>
+						<h1 className={styles.header_heading}>{home.title}</h1>
+						<p className={styles.header_text}>{home.subheading}</p>
 						<img width="103" height="85" className={styles.constellation} src={Constellation} alt="" />
 					</div>
 					<div dangerouslySetInnerHTML={{ __html: iframe.node.html }} />
@@ -37,10 +29,7 @@ export default class HomePage extends React.Component {
 				<div className={styles.about}>
 					<div className={styles.about_content}>
 						<p className={styles.about_text}>
-							ORBS IS A DECENTRALIZED BLOCKCHAIN INFRASTRUCTURE EMPOWERING MAINSTREAM CONSUMER
-							APPLICATIONS TO TRANSITIONING INTO BLOCKCHAIN. ORBS PROVIDES A SCALABLE, COMPLIANT
-							AND UPDATEABLE INFRASTRUCTURE. THE NEXT WAVE OF DECENTRALIZED BUSINESSES WILL BE
-							BUILT BY TODAY’S BIGGEST CONSUMER BRANDS, USING ORBS.
+							{home.about}
 						</p>
 						<ul className={styles.about_icons}>
 							<li>
@@ -92,7 +81,7 @@ export default class HomePage extends React.Component {
 					</div>
 
 					<ul className={styles.team_list}>
-						{team[lang].map((node, index) =>
+						{home.team.map((node, index) =>
 							(<li key={index}>
 								<div className={styles.member_image_wrap}>
 									<div
@@ -112,10 +101,25 @@ export default class HomePage extends React.Component {
 				</div>
 			</div>
 		)
-	}
 }
 export const query = graphql`
-query IndexQuery {
+query HomePageQuery($slug: String!) {
+	allIndexJson (filter: { fields: { slug: { eq: $slug }} }) {
+		edges {
+			node {
+				id
+				title
+				subheading
+        about
+        team {
+          image
+          name
+          title
+          about
+        }
+			}
+		}
+	}
 	allMarkdownRemark {
 		totalCount
 		edges {
@@ -126,24 +130,5 @@ query IndexQuery {
 			}
 		}
 	}
-	allTeamsJson {
-		edges {
-			node {
-				id
-				US {
-					image
-					name
-					title
-					about
-				}
-				Japan {
-					image
-					name
-					title
-					about
-				}
-			}
-		}
-	}
-}
+} 
 `

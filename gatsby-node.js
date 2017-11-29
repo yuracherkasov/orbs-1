@@ -5,8 +5,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   switch (node.internal.type) {
 
-    case 'JapanesewebJson':
-
+    case 'IndexJson':
       const slug = createFilePath({ node, getNode, basePath: `pages` })
       createNodeField({
         node,
@@ -22,7 +21,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allJapanesewebJson {
+        allIndexJson {
           edges {
             node {
               fields {
@@ -33,17 +32,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then(result => {
-      result.data.allJapanesewebJson.edges.map(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve(`./src/templates/home.js`),
-          context: {
-            // Data passed to context is available in page queries as GraphQL variables.
-            slug: node.fields.slug,
-          },
+        result.data.allIndexJson.edges.map(({ node }) => {
+          createPage({
+            path: node.fields.slug,
+            component: path.resolve(`./src/templates/home/index.js`),
+            context: {
+              slug: node.fields.slug,
+            },
+          })
         })
+        resolve()
       })
-      resolve()
-    })
   })
 }

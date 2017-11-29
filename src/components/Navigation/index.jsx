@@ -5,6 +5,9 @@ import US from './img/us.svg'
 import Link from 'gatsby-link'
 
 class Navigation extends React.Component {
+	constructor () {
+		super()
+	}
 	componentWillMount() {
 		this.state={
 			isActiveMenu: false,

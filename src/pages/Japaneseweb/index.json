@@ -1,15 +1,15 @@
 [
   {   
-    "heading": "消費者グレード ブロックチェーン",
+    "title": "消費者グレード ブロックチェーン",
     "subheading": "リアルライフのスケール, コンプライアンスとアップデートのために作られるインフラ",
-    "header-button": "概要プレゼンテーション",
+    "headerButton": "概要プレゼンテーション",
     "about": "ORBSは大衆に権限を持たせた分散型のブロックチェーンを基盤とし、消費者のアプリケーションをブロックチェーンに移行しています ORBSはスケーラブルで規格に対応し更新可能な基礎構造しています 次の分散型ビジネスの波は、今日の最大手消費者ブランド等がORBSを利用することによってやってくるでしょう​",
-    "form-heading": "毎週、私たちからたくさんのイノベーションを得よう​",
-    "form-placeholder": "貴方のEメール",
-    "form-button": "購読​",
-    "form-success": ":)))",
-    "form-error": "This Field Is Required",
-    "team-heading": "アカデミック文書​",
+    "formHeading": "毎週、私たちからたくさんのイノベーションを得よう​",
+    "formPlaceholder": "貴方のEメール",
+    "formButton": "購読​",
+    "formSuccess": ":)))",
+    "formError": "This Field Is Required",
+    "teamHeading": "アカデミック文書​",
     "team": [
       {
         "image": "/img/team/daniel_peled.jpg",
