@@ -7,7 +7,7 @@ class Footer extends React.Component {
 			process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
 		return (
 			<footer className="footer">
-				<a className="footer-brand" href="#" onClick={e => e.preventDefault()}>
+				<a className="footer-brand" href="#home">
 					<img className="logo-img" src={pathPrefix + '/img/logo.png'} alt="" />
 					<img className="logo-text" src={pathPrefix + '/img/logo_text.png'} alt="" />
 				</a>

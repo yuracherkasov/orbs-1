@@ -125,6 +125,11 @@ input:focus{
   background-color: #001826;
   padding: 10px 30px 14px;
 }
+.navbar-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
 .navbar-button {
   width: 40px;
   height: 35px;
@@ -168,21 +173,23 @@ input:focus{
   font-family: 'Raleway', sans-serif;
   display: flex;
   justify-content: flex-end;
-  padding: 8px 3% 4px;
+  padding: 4px 8px 8px;
 }
 .navbar-menu-item {
   position: relative;
 }
 .navbar-menu-item a {
   display: inline-block;
-  min-width: 170px;
+  min-width: 144px;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-size: 13px;
-  padding: 7px 20px;
+  padding: 0 20px;
   text-align: center;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  height: 31px;
+  line-height: 31px;
 }
 .navbar-menu-item a:hover {
   border-color: #1cbeca;
@@ -196,11 +203,11 @@ input:focus{
   background: #1cbeca;
   vertical-align: middle;
   transition: height .2s ease-in 0s;
-  margin-top: -1px;
+  margin-top: -2px;
 }
 .navbar-menu-item:hover:after,
 .navbar-menu-item:hover:before {
-  height: 30px;
+  height: 31px;
   transition: height .2s ease-out .1s;
 }
 .footer {

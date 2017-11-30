@@ -1,9 +1,13 @@
 @font-face {font-family:ITC Avant Garde Gothic Medium;
 	src: url(./fonts/itc-avant-garde-gothic-medium.otf);}
 
+.home_content {
+	overflow: hidden;
+}
 .header {
 	position: relative;
 	background-color: #001826;
+	overflow: hidden;
 }
 .header_content {
 	position: absolute;
@@ -17,7 +21,7 @@
 	align-items: center;
 	flex-direction: column;
 	background: rgba(0, 24, 38, .8) url(./img/global.png) no-repeat center;
-	background-size: contain;
+	background-size: auto 104%;
 	text-align: center;
 	color: #fff;
 }
@@ -33,6 +37,7 @@
 	font-family: ITC Avant Garde Gothic Medium;
 	font-weight: 400;
 	letter-spacing: 2px;
+	transition: all .1s linear;
 }
 .header_text {
 	font-size: 29px;
@@ -73,6 +78,21 @@
 	right: 13%;
 	top: 8%;
 }
+.header_iframe {
+	height: 780px;
+}
+.header_iframe > div {
+	height: 100%;
+}
+.header_iframe > div > div{
+	top: 50%;
+	transform: translateY(-50%);
+}
+@media screen and (max-width: 1400px) {
+	.header_iframe > div > div {
+		padding-bottom: 780px!important;
+	}
+}
 
 .about {
 	background: #001826 url(./img/constellation.png);
@@ -108,7 +128,7 @@
 }
 
 .subscribe_form{
-	padding: 45px 0;
+	padding: 45px 0 55px;
 	min-height: 80px;
 	position: relative;
 	box-sizing: content-box;
@@ -147,7 +167,7 @@
 	color: #fff;
 	position: absolute;
 	left: 35px;
-	bottom: 25px;
+	bottom: 35px;
 	font-size: 20px;
 	font-family: ITC Avant Garde Gothic Medium;
 	font-weight: 400;
@@ -164,7 +184,7 @@
 	width: 100%;
 	position: absolute;
 	left: 0;
-	bottom: 20px;
+	bottom: 30px;
 }
 
 .team {
@@ -199,7 +219,7 @@
 	flex-wrap: wrap;
 	margin: 0 auto;
 	padding: 50px 0 100px;
-	max-width: 1600px;
+	max-width: 1280px;
 }
 .team_list li {
 	width: 48%;
@@ -248,8 +268,50 @@
 	line-height: 25px;
 	letter-spacing: 1px;
 }
+.dot_blue,
+.dot {
+	position: absolute;
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	background-color: #e6e6e6;
+	z-index: 999;
+	border-radius: 50%;
+}
+.dot_blue {
+	background: #546095;
+	width: 8px;
+	height: 8px;
+}
+.dot1 {
+	top: 7%;
+	left: 14%;
+}
+.dot2 {
+	top: 78%;
+	left: 4%;
+}
+.dot3 {
+	top: 88%;
+	left: 34%;
+}
+.dot4 {
+	top: 6%;
+	left: 25%;
+}
+.dot5 {
+	top: 12%;
+	left: 14%;
+}
+.dot6 {
+	top: 40%;
+	right: 16%;
+}
 
 @media screen and (max-width: 960px) {
+	.header_heading {
+		padding: 0 6% 30px;
+	}
 	.header_bg {
 		height: 710px;
 	}
