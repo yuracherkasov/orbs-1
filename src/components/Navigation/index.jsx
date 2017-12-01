@@ -1,7 +1,8 @@
 import React from 'react'
-import { withPrefix } from 'gatsby-link'
-import Japan from './img/japan.svg'
-import US from './img/us.svg'
+import Japan from '../img/japan.svg'
+import US from '../img/us.svg'
+import Logo from '../img/logo.png'
+import LogoText from '../img/logo_text.png'
 import Link from 'gatsby-link'
 
 class Navigation extends React.Component {
@@ -19,8 +20,6 @@ class Navigation extends React.Component {
 	}
 
 	render() {
-		const pathPrefix =
-			process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
 		return (
 			<nav className="navbar">
 				<div className="navbar-container">			
@@ -34,8 +33,8 @@ class Navigation extends React.Component {
 						<span />
 					</button>
 					<a className="navbar-brand" href="#home">
-						<img className="logo-img" src={pathPrefix + '/img/logo.png'} alt="" />
-						<img className="logo-text" src={pathPrefix + '/img/logo_text.png'} alt="" />
+						<img className="logo-img" src={Logo} alt="" />
+						<img className="logo-text" src={LogoText} alt="" />
 					</a>
 					<ul className={`navbar-menu ${this.state.isActiveMenu ? 'active' : ''}`}>
 						<li className="navbar-menu-item">

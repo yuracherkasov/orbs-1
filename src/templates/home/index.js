@@ -3,9 +3,7 @@ import axios from 'axios'
 import MediaQuery from 'react-responsive'
 import { withPrefix } from 'gatsby-link'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
-import Constellation from './img/constellation.png'
 import logoBlue from './img/logo_blue.png'
-import logoBg from './img/bg_logo.png'
 import Reddit from './img/reddit.png'
 import Slack from './img/slack.png'
 import Medium from './img/medium.png'
@@ -51,7 +49,6 @@ export default class Home extends React.Component{
 	}
 
 	changeEmailField = (e) => {
-		// console.log(e.target.value);
 		this.setState({
 			userEmail: e.target.value,
 		})
@@ -113,32 +110,31 @@ export default class Home extends React.Component{
 			return (
 				<div className={styles.home_content}>
 					<ScrollableAnchor id={'home'}>
-					<header className={styles.header}>
-						<div className={styles.header_content}>
-							<h1 className={styles.header_heading} style={{ transform: 'scale(' + CSSscale + ')'}}>{home.title}</h1>
-							<p className={styles.header_text}>{home.subtitle}</p>
-							<a
-							href="https://s3.us-east-2.amazonaws.com/orbs-network-website/assets/en/orbs_presentation_en_1511863420.pdf"
-							target="_blank"
-							className={styles.header_button}
-							>{home.headerButton}</a>
-							<img width="103" height="85" className={styles.constellation} src={Constellation} alt="" />
-						</div>
-						<MediaQuery query="(min-width: 961px)">
-							<div>
-								<div className={styles.header_iframe} dangerouslySetInnerHTML={{ __html: iframe.node.html }} />
-								<span className={`${styles.dot} ${styles.dot1}`} />
-								<span className={`${styles.dot} ${styles.dot2}`} />
-								<span className={`${styles.dot} ${styles.dot3}`} />
-								<span className={`${styles.dot_blue} ${styles.dot4}`} />
+						<header className={styles.header}>
+							<div className={styles.header_content}>
+								<h1 className={styles.header_heading} style={{ transform: 'scale(' + CSSscale + ')'}}>{home.title}</h1>
+								<p className={styles.header_text}>{home.subtitle}</p>
+								<a
+								href="https://s3.us-east-2.amazonaws.com/orbs-network-website/assets/en/orbs_presentation_en_1511863420.pdf"
+								target="_blank"
+								className={styles.header_button}
+								>{home.headerButton}</a>
 							</div>
-						</MediaQuery>	
-						<MediaQuery query="(max-width: 960px)">
-							<div className={styles.header_bg}>
-								<span className={`${styles.dot} ${styles.dot5}`} />
-							</div>
-						</MediaQuery>						
-					</header>
+							<MediaQuery query="(min-width: 961px)">
+								<div>
+									<div className={styles.header_iframe} dangerouslySetInnerHTML={{ __html: iframe.node.html }} />
+									<span className={`${styles.dot} ${styles.dot1}`} />
+									<span className={`${styles.dot} ${styles.dot2}`} />
+									<span className={`${styles.dot} ${styles.dot3}`} />
+									<span className={`${styles.dot_blue} ${styles.dot4}`} />
+								</div>
+							</MediaQuery>	
+							<MediaQuery query="(max-width: 960px)">
+								<div className={styles.header_bg}>
+									<span className={`${styles.dot} ${styles.dot5}`} />
+								</div>
+							</MediaQuery>						
+						</header>
 					</ScrollableAnchor>
 
 					<ScrollableAnchor id={'about'}>
@@ -205,6 +201,7 @@ export default class Home extends React.Component{
 							<span className={`${styles.dot} ${styles.dot6}`} />
 						</div>
 					</ScrollableAnchor>
+					
 					<ScrollableAnchor id={'team'}>
 						<div className={styles.team}>
 							<div className={styles.team_logo}>
@@ -231,9 +228,6 @@ export default class Home extends React.Component{
 								)}
 
 							</ul>
-							<MediaQuery query="(max-width: 960px)">
-								<img src={logoBg} alt="" />
-							</MediaQuery>
 						</div>
 					</ScrollableAnchor>
 				</div>

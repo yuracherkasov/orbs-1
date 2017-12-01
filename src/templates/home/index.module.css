@@ -9,6 +9,24 @@
 	background-color: #001826;
 	overflow: hidden;
 }
+.header:after,
+.header:before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: 103px;
+	height: 85px;
+	background: url(./img/constellation.png) no-repeat;
+	background-size: contain;
+	z-index: 99;
+}
+.header:after {
+	top: 8%;
+	right: 13%;
+}
+.header:before {
+	display: none;
+}
 .header_content {
 	position: absolute;
 	left: 0;
@@ -71,13 +89,6 @@
 	color: #fff;
 	background: rgba(28, 190, 202, 1);
 }
-.constellation {
-	position: absolute;
-}
-.header .constellation {
-	right: 13%;
-	top: 8%;
-}
 .header_iframe {
 	height: 780px;
 }
@@ -86,11 +97,21 @@
 }
 .header_iframe > div > div{
 	top: 50%;
-	transform: translateY(-50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 1400px) {
 	.header_iframe > div > div {
 		padding-bottom: 780px!important;
+		top: 0;
+		left: 0;
+		transform: none;
+	}
+	.header_iframe iframe{
+		width: 1400px!important;
+		left: 50%!important;
+		top: 50%!important;
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -98,7 +119,6 @@
 	background: #001826 url(./img/constellation.png);
 	background-repeat: no-repeat;
 	background-position: 4% 50%;
-	/* background-attachment: fixed; */
 	padding: 30px 0;
 	position: relative;
 }
@@ -315,10 +335,45 @@
 	.header_bg {
 		height: 710px;
 	}
+	.header:before {
+		display: inline-block;
+		top: 2%;
+		left: 3%;
+	}
+	.header:after {
+		top: 1%;
+		right: 2%;
+	}
 	.team {
-		background-position: 180% 40%;
+		position: relative;
+		background-position: 180% 12%;
+	}
+	.team_list:after,
+	.team:after,
+	.team:before {
+		content: "";
+		position: absolute;
+		display: inline-block;
+		width: 511px;
+		height: 518px;
+		background: url(./img/bg_logo.png) no-repeat center;
+		background-size: contain;
+		z-index: -1;
+	}
+	.team:before {
+		left: -300px;
+		top: 25%;
+	}
+	.team:after {
+		left: -300px;
+		top: 55%;
+	}
+	.team_list:after {
+		right: -350px;
+		top: 34%;
 	}
 	.team_list {
+		position: relative;
 		max-width: 700px;
 		margin: 0 auto;
 		padding: 40px 0 80px;
@@ -332,6 +387,7 @@
 		padding: 5px;
 		margin-right: 5%;
 		margin-bottom: 5px;
+		background: #fff;
 	}
 	.member_info {
 		overflow: visible;
