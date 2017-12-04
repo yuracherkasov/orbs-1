@@ -25,7 +25,7 @@ export default class Home extends React.Component{
 			CSSscale: 1,
 		}
 		this.props.passDataToNav(this.props.data.allIndexJson.edges[0].node.navigation);
-		configureAnchors({ scrollDuration: 1500 });	
+		configureAnchors({ scrollDuration: 1500 });
 	}
 
 	componentDidMount() {
@@ -128,12 +128,12 @@ export default class Home extends React.Component{
 									<span className={`${styles.dot} ${styles.dot3}`} />
 									<span className={`${styles.dot_blue} ${styles.dot4}`} />
 								</div>
-							</MediaQuery>	
+							</MediaQuery>
 							<MediaQuery query="(max-width: 960px)">
 								<div className={styles.header_bg}>
 									<span className={`${styles.dot} ${styles.dot5}`} />
 								</div>
-							</MediaQuery>						
+							</MediaQuery>
 						</header>
 					</ScrollableAnchor>
 
@@ -195,13 +195,13 @@ export default class Home extends React.Component{
 											</div>
 										)
 									}
-									
+
 								</form>
 							</div>
 							<span className={`${styles.dot} ${styles.dot6}`} />
 						</div>
 					</ScrollableAnchor>
-					
+
 					<ScrollableAnchor id={'team'}>
 						<div className={styles.team}>
 							<div className={styles.team_logo}>
@@ -270,5 +270,5 @@ query HomePageQuery($slug: String!) {
 			}
 		}
 	}
-} 
+}
 `
