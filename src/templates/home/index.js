@@ -115,7 +115,7 @@ export default class Home extends React.Component{
 								<h1 className={styles.header_heading} style={{ transform: 'scale(' + CSSscale + ')'}}>{home.title}</h1>
 								<p className={styles.header_text}>{home.subtitle}</p>
 								<a
-								href="https://s3.us-east-2.amazonaws.com/orbs-network-website/assets/en/orbs_presentation_en_1511863420.pdf"
+								href={pathPrefix + home.presentationUrl}
 								target="_blank"
 								className={styles.header_button}
 								>{home.headerButton}</a>
@@ -250,6 +250,7 @@ query HomePageQuery($slug: String!) {
 				formButton
 				formSuccess
 				formError
+				presentationUrl
 				teamHeading
         team {
           image

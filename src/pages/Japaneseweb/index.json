@@ -1,5 +1,5 @@
 [
-  {   
+  {
     "navigation": [ "チーム", "アカデミック文書", "について" ],
     "title": "消費者グレード ブロックチェーン",
     "subtitle": "リアルライフのスケール, コンプライアンスとアップデートのために作られるインフラ",
@@ -10,6 +10,7 @@
     "formButton": "購読​",
     "formSuccess": "成功しました! :)​",
     "formError": "This Field Is Required",
+    "presentationUrl": "/pdf/jp/orbs_presentation_jp.pdf",
     "teamHeading": "アカデミック文書​",
     "team": [
       {
